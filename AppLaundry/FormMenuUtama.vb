@@ -17,7 +17,6 @@
         MASTERToolStripMenuItem.Visible = False
         TRANSAKSIToolStripMenuItem.Visible = False
         LAPORANToolStripMenuItem.Visible = False
-        UTILITYToolStripMenuItem.Visible = False
     End Sub
 
     Private Sub USERToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles USERToolStripMenuItem.Click
@@ -38,5 +37,16 @@
 
     Private Sub TRANSAKSIToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TRANSAKSIToolStripMenuItem.Click
         FormTransaksi.ShowDialog()
+    End Sub
+
+    Private Sub TRANSAKSIToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles TRANSAKSIToolStripMenuItem1.Click
+        FormReportTransaksi.ShowDialog()
+    End Sub
+
+    Private Sub LOGOUTToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LOGOUTToolStripMenuItem.Click
+        FormLogin.txtkodeuser.Text = ""
+        FormLogin.txtpassword.Text = ""
+        FormLogin.Show()
+        Call Terkunci()
     End Sub
 End Class

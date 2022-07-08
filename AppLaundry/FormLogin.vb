@@ -20,18 +20,25 @@ Public Class FormLogin
         Rd.Read()
         If Rd.HasRows Then
             Me.Close()
-            Call BukaKunci()
+            Call BukaKunci(Rd("LevelUser"))
         Else
             MsgBox("Id User atau Password salah !!!", MsgBoxStyle.Critical)
             txtkodeuser.Focus()
         End If
     End Sub
-    Sub BukaKunci()
+    Sub BukaKunci(LevelUser As String)
+        FormMenuUtama.TRANSAKSIToolStripMenuItem.Visible = True
         FormMenuUtama.LOGINToolStripMenuItem.Visible = False
         FormMenuUtama.LOGOUTToolStripMenuItem.Visible = True
-        FormMenuUtama.MASTERToolStripMenuItem.Visible = True
-        FormMenuUtama.TRANSAKSIToolStripMenuItem.Visible = True
         FormMenuUtama.UTILITYToolStripMenuItem.Visible = True
-        FormMenuUtama.LAPORANToolStripMenuItem.Visible = True
+        FormMenuUtama.MASTERToolStripMenuItem.Visible = True
+
+        If (LevelUser = "ADMIN") Then
+            FormMenuUtama.LAPORANToolStripMenuItem.Visible = True
+        Else
+            FormMenuUtama.USERToolStripMenuItem.Enabled = False
+            FormMenuUtama.LAPORANToolStripMenuItem.Visible = False
+        End If
+
     End Sub
 End Class

@@ -17,3 +17,4 @@ E:\Basthian Alfayet\TEST PT SAMBU\Project Vb.NET\AppLaundry\AppLaundry\obj\Debug
 E:\Basthian Alfayet\TEST PT SAMBU\Project Vb.NET\AppLaundry\AppLaundry\obj\Debug\AppLaundry.ReportPelanggan.resources
 E:\Basthian Alfayet\TEST PT SAMBU\Project Vb.NET\AppLaundry\AppLaundry\obj\Debug\AppLaundry.ReportUser.resources
 E:\Basthian Alfayet\TEST PT SAMBU\Project Vb.NET\AppLaundry\AppLaundry\obj\Debug\AppLaundry.FormTransaksi.resources
+E:\Basthian Alfayet\TEST PT SAMBU\Project Vb.NET\AppLaundry\AppLaundry\obj\Debug\AppLaundry.FormReportTransaksi.resources

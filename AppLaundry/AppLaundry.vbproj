@@ -103,6 +103,12 @@
       <DependentUpon>FormMenuUtama.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormReportTransaksi.Designer.vb">
+      <DependentUpon>FormReportTransaksi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormReportTransaksi.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormTransaksi.Designer.vb">
       <DependentUpon>FormTransaksi.vb</DependentUpon>
     </Compile>
@@ -151,6 +157,9 @@
     <EmbeddedResource Include="FormMenuUtama.resx">
       <DependentUpon>FormMenuUtama.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormReportTransaksi.resx">
+      <DependentUpon>FormReportTransaksi.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormTransaksi.resx">
       <DependentUpon>FormTransaksi.vb</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +173,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportPelanggan.rdlc" />
+    <EmbeddedResource Include="ReportTransaksi.rdlc" />
     <EmbeddedResource Include="ReportUser.rdlc" />
     <EmbeddedResource Include="ReportUser.resx">
       <DependentUpon>ReportUser.vb</DependentUpon>

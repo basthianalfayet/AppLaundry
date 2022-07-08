@@ -1,0 +1,11 @@
+Visual Basic 2012
+Xampp Version 3.2.4
+Driver Mysql Connector odbc 8.00.29
+
+Login Admin
+username : USR001
+password : ADMIN
+
+Login User
+username : USR002
+password : USER
