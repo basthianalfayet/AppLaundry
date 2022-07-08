@@ -42,29 +42,19 @@ Partial Class FormTransaksi
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.cmbjenis = New System.Windows.Forms.ComboBox()
         Me.TbljenisBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSet11 = New AppLaundry.DataSet1()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.txtjumlah = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Tbl_pelangganTableAdapter = New AppLaundry.DataSet1TableAdapters.tbl_pelangganTableAdapter()
         Me.Tbl_jenisTableAdapter = New AppLaundry.DataSet1TableAdapters.tbl_jenisTableAdapter()
-        Me.txttotalharga = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.btnsimpan = New System.Windows.Forms.Button()
+        Me.btntambahitem = New System.Windows.Forms.Button()
+        Me.panelitem = New System.Windows.Forms.Panel()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.txttotal = New System.Windows.Forms.TextBox()
+        Me.txttunai = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.txtkembalian = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
         CType(Me.dgvpelanggan, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblpelangganBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -221,22 +211,11 @@ Partial Class FormTransaksi
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(666, 23)
+        Me.Label5.Location = New System.Drawing.Point(667, 9)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(63, 13)
         Me.Label5.TabIndex = 43
         Me.Label5.Text = "Item Cucian"
-        '
-        'cmbjenis
-        '
-        Me.cmbjenis.DataSource = Me.TbljenisBindingSource
-        Me.cmbjenis.DisplayMember = "NamaJenis"
-        Me.cmbjenis.FormattingEnabled = True
-        Me.cmbjenis.Location = New System.Drawing.Point(669, 81)
-        Me.cmbjenis.Name = "cmbjenis"
-        Me.cmbjenis.Size = New System.Drawing.Size(112, 21)
-        Me.cmbjenis.TabIndex = 44
-        Me.cmbjenis.ValueMember = "Harga"
         '
         'TbljenisBindingSource
         '
@@ -248,48 +227,6 @@ Partial Class FormTransaksi
         Me.DataSet11.DataSetName = "DataSet1"
         Me.DataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(666, 65)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(31, 13)
-        Me.Label7.TabIndex = 45
-        Me.Label7.Text = "Jenis"
-        '
-        'txtjumlah
-        '
-        Me.txtjumlah.Location = New System.Drawing.Point(789, 81)
-        Me.txtjumlah.Name = "txtjumlah"
-        Me.txtjumlah.ReadOnly = True
-        Me.txtjumlah.Size = New System.Drawing.Size(89, 20)
-        Me.txtjumlah.TabIndex = 46
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(786, 65)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(36, 13)
-        Me.Label8.TabIndex = 47
-        Me.Label8.Text = "Harga"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(882, 65)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(40, 13)
-        Me.Label9.TabIndex = 49
-        Me.Label9.Text = "Jumlah"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(885, 81)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 48
-        '
         'Tbl_pelangganTableAdapter
         '
         Me.Tbl_pelangganTableAdapter.ClearBeforeFill = True
@@ -298,146 +235,95 @@ Partial Class FormTransaksi
         '
         Me.Tbl_jenisTableAdapter.ClearBeforeFill = True
         '
-        'txttotalharga
+        'btnsimpan
         '
-        Me.txttotalharga.AutoSize = True
-        Me.txttotalharga.Location = New System.Drawing.Point(988, 65)
-        Me.txttotalharga.Name = "txttotalharga"
-        Me.txttotalharga.Size = New System.Drawing.Size(63, 13)
-        Me.txttotalharga.TabIndex = 51
-        Me.txttotalharga.Text = "Total Harga"
+        Me.btnsimpan.Location = New System.Drawing.Point(1072, 343)
+        Me.btnsimpan.Name = "btnsimpan"
+        Me.btnsimpan.Size = New System.Drawing.Size(75, 23)
+        Me.btnsimpan.TabIndex = 61
+        Me.btnsimpan.Text = "Simpan"
+        Me.btnsimpan.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'btntambahitem
         '
-        Me.TextBox1.Location = New System.Drawing.Point(991, 81)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(89, 20)
-        Me.TextBox1.TabIndex = 50
+        Me.btntambahitem.Location = New System.Drawing.Point(952, 343)
+        Me.btntambahitem.Name = "btntambahitem"
+        Me.btntambahitem.Size = New System.Drawing.Size(114, 23)
+        Me.btntambahitem.TabIndex = 62
+        Me.btntambahitem.Text = "Tambah Item Baru"
+        Me.btntambahitem.UseVisualStyleBackColor = True
         '
-        'Button1
+        'panelitem
         '
-        Me.Button1.BackColor = System.Drawing.Color.Red
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button1.Location = New System.Drawing.Point(1086, 128)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(34, 23)
-        Me.Button1.TabIndex = 52
-        Me.Button1.Text = "X"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.panelitem.Location = New System.Drawing.Point(670, 25)
+        Me.panelitem.Name = "panelitem"
+        Me.panelitem.Size = New System.Drawing.Size(477, 202)
+        Me.panelitem.TabIndex = 63
         '
-        'Label10
+        'Label7
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(988, 114)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(63, 13)
-        Me.Label10.TabIndex = 60
-        Me.Label10.Text = "Total Harga"
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(957, 236)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(42, 13)
+        Me.Label7.TabIndex = 64
+        Me.Label7.Text = "TOTAL"
         '
-        'TextBox3
+        'txttotal
         '
-        Me.TextBox3.Location = New System.Drawing.Point(991, 130)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.ReadOnly = True
-        Me.TextBox3.Size = New System.Drawing.Size(89, 20)
-        Me.TextBox3.TabIndex = 59
+        Me.txttotal.Location = New System.Drawing.Point(1047, 233)
+        Me.txttotal.Name = "txttotal"
+        Me.txttotal.ReadOnly = True
+        Me.txttotal.Size = New System.Drawing.Size(100, 20)
+        Me.txttotal.TabIndex = 65
         '
-        'Label11
+        'txttunai
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(882, 114)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(40, 13)
-        Me.Label11.TabIndex = 58
-        Me.Label11.Text = "Jumlah"
+        Me.txttunai.Location = New System.Drawing.Point(1047, 262)
+        Me.txttunai.Name = "txttunai"
+        Me.txttunai.Size = New System.Drawing.Size(100, 20)
+        Me.txttunai.TabIndex = 67
         '
-        'TextBox4
+        'Label8
         '
-        Me.TextBox4.Location = New System.Drawing.Point(885, 130)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox4.TabIndex = 57
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(957, 265)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(40, 13)
+        Me.Label8.TabIndex = 66
+        Me.Label8.Text = "TUNAI"
         '
-        'Label12
+        'txtkembalian
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(786, 114)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(36, 13)
-        Me.Label12.TabIndex = 56
-        Me.Label12.Text = "Harga"
+        Me.txtkembalian.Location = New System.Drawing.Point(1047, 290)
+        Me.txtkembalian.Name = "txtkembalian"
+        Me.txtkembalian.ReadOnly = True
+        Me.txtkembalian.Size = New System.Drawing.Size(100, 20)
+        Me.txtkembalian.TabIndex = 69
         '
-        'TextBox5
+        'Label9
         '
-        Me.TextBox5.Location = New System.Drawing.Point(789, 130)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.ReadOnly = True
-        Me.TextBox5.Size = New System.Drawing.Size(89, 20)
-        Me.TextBox5.TabIndex = 55
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(666, 114)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(31, 13)
-        Me.Label13.TabIndex = 54
-        Me.Label13.Text = "Jenis"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.DataSource = Me.TbljenisBindingSource
-        Me.ComboBox1.DisplayMember = "NamaJenis"
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(669, 130)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(112, 21)
-        Me.ComboBox1.TabIndex = 53
-        Me.ComboBox1.ValueMember = "Harga"
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(1005, 343)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 61
-        Me.Button2.Text = "Simpan"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(885, 343)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(114, 23)
-        Me.Button3.TabIndex = 62
-        Me.Button3.Text = "Tambah Item Baru"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(957, 293)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(68, 13)
+        Me.Label9.TabIndex = 68
+        Me.Label9.Text = "KEMBALIAN"
         '
         'FormTransaksi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1173, 409)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.Label12)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.Label13)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.txttotalharga)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtkembalian)
         Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.txttunai)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.txtjumlah)
+        Me.Controls.Add(Me.txttotal)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.cmbjenis)
+        Me.Controls.Add(Me.panelitem)
+        Me.Controls.Add(Me.btntambahitem)
+        Me.Controls.Add(Me.btnsimpan)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.txttelepon)
@@ -481,26 +367,16 @@ Partial Class FormTransaksi
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents cmbjenis As System.Windows.Forms.ComboBox
-    Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents txtjumlah As System.Windows.Forms.TextBox
-    Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents DataSet11 As AppLaundry.DataSet1
     Friend WithEvents TbljenisBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents Tbl_jenisTableAdapter As AppLaundry.DataSet1TableAdapters.tbl_jenisTableAdapter
-    Friend WithEvents txttotalharga As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents Label11 As System.Windows.Forms.Label
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
-    Friend WithEvents Label12 As System.Windows.Forms.Label
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
-    Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents btnsimpan As System.Windows.Forms.Button
+    Friend WithEvents btntambahitem As System.Windows.Forms.Button
+    Friend WithEvents panelitem As System.Windows.Forms.Panel
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents txttotal As System.Windows.Forms.TextBox
+    Friend WithEvents txttunai As System.Windows.Forms.TextBox
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents txtkembalian As System.Windows.Forms.TextBox
+    Friend WithEvents Label9 As System.Windows.Forms.Label
 End Class

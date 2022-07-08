@@ -139,4 +139,12 @@ Public Class FormMasterUser
     Private Sub btntutup_Click(sender As Object, e As EventArgs) Handles btntutup.Click
 
     End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub ComboBox1_SelectedValueChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedValueChanged
+
+    End Sub
 End Class

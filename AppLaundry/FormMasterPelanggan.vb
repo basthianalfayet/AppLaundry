@@ -111,4 +111,8 @@ Public Class FormMasterPelanggan
     Private Sub dgvpelanggan_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvpelanggan.CellContentClick
 
     End Sub
+
+    Private Sub txtidpelanggan_TextChanged(sender As Object, e As EventArgs) Handles txtidpelanggan.TextChanged
+
+    End Sub
 End Class
